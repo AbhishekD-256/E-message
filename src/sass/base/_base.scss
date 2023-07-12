@@ -1,0 +1,7 @@
+@import './reset';
+@import './typography';
+
+.app {
+    overflow: hidden;
+    height: calc(100vh - 56px);
+}

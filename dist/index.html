@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta chat-name font-sm fw-sm="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-message</title>
+<script defer src="script.js"></script><link href="styles/style.css" rel="stylesheet"></head>
+
+<body>
+
+    <header class="header  fx-sb">
+        <div class="fx-cc  gap-md">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path
+                    d="M17.8657 8.82727L12.1748 3.74781L31.1015 3.74731C31.5976 3.7473 31.9998 4.14946 31.9998 4.64556V7.92854C31.9998 8.42461 31.5977 8.82677 31.1016 8.82678L17.8657 8.82727Z"
+                    fill="#246DD3" />
+                <path
+                    d="M22.806 19.1716V14.0921H29.2419C29.7379 14.0921 30.1401 14.4943 30.1401 14.9904V18.2733C30.1401 18.7694 29.7379 19.1716 29.2419 19.1716H22.806Z"
+                    fill="#246DD3" />
+                <path
+                    d="M12.1748 29.7012L17.8657 24.6218H31.1016C31.5977 24.6218 31.9999 25.024 31.9999 25.52V28.803C31.9999 29.2991 31.5977 29.7012 31.1016 29.7012H12.1748Z"
+                    fill="#246DD3" />
+                <path
+                    d="M27.3798 16.6215C27.3798 24.1581 21.2506 30.2676 13.6899 30.2676C6.12918 30.2676 0 24.1581 0 16.6215C0 9.08493 6.12918 2.97534 13.6899 2.97534C21.2506 2.97534 27.3798 9.08493 27.3798 16.6215ZM5.22955 16.6215C5.22955 21.2791 9.01738 25.0548 13.6899 25.0548C18.3624 25.0548 22.1503 21.2791 22.1503 16.6215C22.1503 11.9639 18.3624 8.18817 13.6899 8.18817C9.01738 8.18817 5.22955 11.9639 5.22955 16.6215Z"
+                    fill="#2595FF" />
+            </svg>
+
+            <div class="logo  fw-sb">E-Message</div>
+        </div>
+
+        <div class="header__right  fx-cc">
+            <button class="settings-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M8.78825 1.99574C8.99424 1.92925 9.21892 1.95499 9.40453 2.06636L11.5969 3.38175C11.8656 3.36975 12.1347 3.36975 12.4034 3.38178L14.5867 2.07528C14.7707 1.96513 14.9932 1.93907 15.1977 2.00369C16.6304 2.45634 17.9477 3.21495 19.0582 4.22701C19.2174 4.37209 19.3065 4.57862 19.3029 4.79397L19.26 7.34232C19.4081 7.56966 19.5439 7.80472 19.667 8.0465L21.8894 9.2821C22.0765 9.38614 22.2102 9.56521 22.2569 9.77417C22.5839 11.2386 22.5873 12.7568 22.267 14.2227C22.2209 14.4335 22.0864 14.6142 21.8977 14.7187L19.6667 15.9543C19.5437 16.1959 19.4079 16.4307 19.26 16.6579L19.3029 19.2062C19.3065 19.4216 19.2174 19.6281 19.0582 19.7732C17.95 20.7831 16.6384 21.5439 15.2116 22.0045C15.0056 22.071 14.7809 22.0452 14.5953 21.9338L12.403 20.6184C12.1342 20.6305 11.8651 20.6304 11.5964 20.6184L9.41316 21.9249C9.22908 22.0351 9.00664 22.0611 8.80209 21.9965C7.36937 21.5439 6.05214 20.7853 4.9416 19.7732C4.78239 19.6281 4.69325 19.4216 4.69689 19.2062L4.73984 16.6636C4.59266 16.4339 4.45696 16.1971 4.33323 15.9539L2.11046 14.7181C1.92333 14.6141 1.78958 14.435 1.74293 14.226C1.41596 12.7616 1.41251 11.2434 1.73282 9.7775C1.77887 9.56675 1.91344 9.38603 2.10216 9.28151L4.33314 8.04588C4.45613 7.80432 4.59187 7.56947 4.73979 7.34232L4.69689 4.79397C4.69326 4.57861 4.78241 4.37207 4.94162 4.22699C6.04982 3.21714 7.36145 2.45633 8.78825 1.99574ZM6.20252 5.11573L6.24355 7.5531C6.24621 7.71101 6.19895 7.86572 6.10852 7.99519C5.90735 8.2832 5.73123 8.58792 5.58209 8.90599C5.51504 9.04899 5.40456 9.16717 5.2664 9.24369L3.13316 10.4252C2.94657 11.4669 2.94916 12.5339 3.14081 13.5747L5.26748 14.7571C5.40459 14.8333 5.51435 14.9506 5.5813 15.0925C5.73371 15.4155 5.91148 15.7259 6.11294 16.0208C6.20053 16.149 6.24617 16.3013 6.24355 16.4565L6.20254 18.8844C7.01319 19.5692 7.94022 20.103 8.93946 20.4603L11.0242 19.2128C11.1562 19.1338 11.3093 19.0973 11.4628 19.1083C11.8204 19.1338 12.1794 19.1338 12.537 19.1083C12.6908 19.0973 12.8442 19.1339 12.9764 19.2132L15.0678 20.4681C16.0638 20.1051 16.9878 19.569 17.7973 18.8845L17.7563 16.4471C17.7536 16.2892 17.8009 16.1345 17.8913 16.005C18.0925 15.717 18.2686 15.4123 18.4177 15.0942C18.4848 14.9512 18.5952 14.833 18.7334 14.7565L20.8666 13.575C21.0532 12.5333 21.0507 11.4663 20.859 10.4255L18.7323 9.2431C18.5947 9.16656 18.4846 9.04861 18.4177 8.90599C18.2686 8.58792 18.0925 8.2832 17.8913 7.99519C17.8009 7.86572 17.7536 7.71101 17.7563 7.5531L17.7973 5.11583C16.9866 4.431 16.0596 3.89721 15.0603 3.53988L12.9757 4.78742C12.8436 4.86643 12.6905 4.90292 12.537 4.89194C12.1794 4.86636 11.8204 4.86636 11.4628 4.89194C11.309 4.90294 11.1556 4.86628 11.0234 4.78697L8.93199 3.53212C7.93602 3.89511 7.01197 4.43124 6.20252 5.11573ZM11.9999 8.2501C9.92884 8.2501 8.2499 9.92903 8.2499 12.0001C8.2499 14.0712 9.92884 15.7501 11.9999 15.7501C14.071 15.7501 15.7499 14.0712 15.7499 12.0001C15.7499 9.92903 14.071 8.2501 11.9999 8.2501ZM6.7499 12.0001C6.7499 9.1006 9.10041 6.7501 11.9999 6.7501C14.8994 6.7501 17.2499 9.1006 17.2499 12.0001C17.2499 14.8996 14.8994 17.2501 11.9999 17.2501C9.10041 17.2501 6.7499 14.8996 6.7499 12.0001Z"
+                        fill="#616C76" />
+                </svg>
+            </button>
+
+            <button class="more-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M12 13.125C12.6213 13.125 13.125 12.6213 13.125 12C13.125 11.3787 12.6213 10.875 12 10.875C11.3787 10.875 10.875 11.3787 10.875 12C10.875 12.6213 11.3787 13.125 12 13.125Z"
+                        fill="#616C76" />
+                    <path
+                        d="M12 7.125C12.6213 7.125 13.125 6.62132 13.125 6C13.125 5.37868 12.6213 4.875 12 4.875C11.3787 4.875 10.875 5.37868 10.875 6C10.875 6.62132 11.3787 7.125 12 7.125Z"
+                        fill="#616C76" />
+                    <path
+                        d="M12 19.125C12.6213 19.125 13.125 18.6213 13.125 18C13.125 17.3787 12.6213 16.875 12 16.875C11.3787 16.875 10.875 17.3787 10.875 18C10.875 18.6213 11.3787 19.125 12 19.125Z"
+                        fill="#616C76" />
+                </svg>
+            </button>
+
+            <figure class="user-image  clickable  lh-0">
+                <img src="images/profile.png" alt="user profile image">
+            </figure>
+        </div>
+
+        <div class="sender-status">
+            <span class="chat-full-name  font-sm  fw-sb  clickable">Caeser</span> last seen 5 min ago
+        </div>
+    </header>
+
+    <main class="app  fx">
+        <aside class="side-menu  custom-scroll">
+            <div class="side-menu__header">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+
+            <ul class="chat-list">
+                <li class="chat-list__item  clickable  fx  gap-sm  online">
+                    <figure class="chat-avatar  lh-0">
+                        <img src="images/zack.png" alt="profile image">
+                    </figure>
+                    <div class="chat-info">
+                        <div class="fx-sb">
+                            <h3 class="chat-name  font-sm  fw-sb">Zack Fox</h3>
+                            <span class="last-message-time  font-xsm">10:49 AM</span>
+                        </div>
+                        <div class="fx-sb">
+                            <p class="last-message  font-sm">Have you ever heard of that thing</p>
+                            <!-- <div>23</div> -->
+                        </div>
+                    </div>
+                </li>
+
+                <li class="chat-list__item  clickable  fx  gap-sm  unread">
+                    <figure class="chat-avatar  lh-0">
+                        <img src="images/kathryn-cooper.png" alt="profile image">
+                    </figure>
+
+                    <div class="chat-info">
+                        <div class="fx-sb">
+                            <h3 class="chat-name  font-sm  fw-sb">Kathryn Cooper</h3>
+                            <span class="last-message-time  font-xsm">6:34 PM</span>
+                        </div>
+                        <div class="fx-sb">
+                            <p class="last-message  font-sm">Thank you!</p>
+                            <div class="unread-msgs  font-xsm">3</div>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="chat-list__item  clickable  fx  gap-sm  unread  muted">
+                    <figure class="chat-avatar  lh-0">
+                        <img src="images/arthur-cooper.png" alt="profile image">
+                    </figure>
+
+                    <div class="chat-info">
+                        <div class="fx-sb">
+                            <h3 class="chat-name  font-sm  fw-sb">Arthur Cooper</h3>
+                            <span class="last-message-time  font-xsm">1:21 AM</span>
+                        </div>
+                        <div class="fx-sb">
+                            <p class="last-message  font-sm">Did you hear about OE DS</p>
+                            <div class="unread-msgs  font-xsm">257</div>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="chat-list__item  clickable  fx  gap-sm">
+                    <figure class="chat-avatar  lh-0">
+                        <img src="images/colleen-pena.png" alt="profile image">
+                    </figure>
+
+                    <div class="chat-info">
+                        <div class="fx-sb">
+                            <h3 class="chat-name  font-sm  fw-sb">Colleen Pena</h3>
+                            <span class="last-message-time  font-xsm">1:26 AM</span>
+                        </div>
+                        <div class="fx-sb">
+                            <p class="last-message  font-sm">I like your idea, but</p>
+                            <!-- <div>23</div> -->
+                        </div>
+                    </div>
+
+                </li>
+                <li class="chat-list__item  clickable  fx  gap-sm  online  unread  muted">
+                    <figure class="chat-avatar  lh-0">
+                        <img src="images/regina-cooper.png" alt="profile image">
+                    </figure>
+
+                    <div class="chat-info">
+                        <div class="fx-sb">
+                            <h3 class="chat-name  font-sm  fw-sb">Regina Cooper</h3>
+                            <span class="last-message-time  font-xsm">1:05 PM</span>
+                        </div>
+                        <div class="fx-sb">
+                            <p class="last-message  font-sm">Are you losing sales because</p>
+                            <div class="unread-msgs  font-xsm">7</div>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="chat-list__item  clickable  fx  gap-sm">
+                    <figure class="chat-avatar  lh-0">
+                        <img src="images/caesar.png" alt="profile image">
+                    </figure>
+
+                    <div class="chat-info">
+                        <div class="fx-sb">
+                            <h3 class="chat-name  font-sm  fw-sb">Caesar</h3>
+                            <span class="last-message-time  font-xsm">8:33 PM</span>
+                        </div>
+                        <div class="fx-sb">
+                            <p class="last-message  font-sm">You: I don’t know, but a lot of</p>
+                            <!-- <div class="unread-msgs  font-xsm">7</div> -->
+                        </div>
+                    </div>
+
+                </li>
+                <li class="chat-list__item  clickable  fx  gap-sm">
+                    <figure class="chat-avatar  lh-0">
+                        <img src="images/floyd-flores.png" alt="profile image">
+                    </figure>
+
+                    <div class="chat-info">
+                        <div class="fx-sb">
+                            <h3 class="chat-name  font-sm  fw-sb">Floyd Flores</h3>
+                            <span class="last-message-time  font-xsm">8:33 AM</span>
+                        </div>
+                        <div class="fx-sb">
+                            <p class="last-message  font-sm">Project or undertaking,</p>
+                            <!-- <div>23</div> -->
+                        </div>
+                    </div>
+
+                </li>
+                <li class="chat-list__item  clickable  fx  gap-sm  selected">
+                    <figure class="chat-avatar  lh-0">
+                        <img src="images/brandon.png" alt="profile image">
+                    </figure>
+
+                    <div class="chat-info">
+                        <div class="fx-sb">
+                            <h3 class="chat-name  font-sm  fw-sb">Brandon Steward</h3>
+                            <span class="last-message-time  font-xsm">2:32 AM</span>
+                        </div>
+                        <div class="fx-sb">
+                            <p class="last-message  font-sm">Have you ever heard of</p>
+                            <!-- <div>23</div> -->
+                        </div>
+                    </div>
+
+                </li>
+                <li class="chat-list__item  clickable  fx  gap-sm">
+                    <figure class="chat-avatar  lh-0">
+                        <img src="images/zack.png" alt="profile image">
+                    </figure>
+
+                    <div class="chat-info">
+                        <div class="fx-sb">
+                            <h3 class="chat-name  font-sm  fw-sb">Zack Fox</h3>
+                            <span class="last-message-time  font-xsm">10:49 AM</span>
+                        </div>
+                        <div class="fx-sb">
+                            <p class="last-message  font-sm">Have you ever heard of</p>
+                            <!-- <div>23</div> -->
+                        </div>
+                    </div>
+
+                </li>
+                <li class="chat-list__item  clickable  fx  gap-sm">
+                    <figure class="chat-avatar  lh-0">
+                        <img src="images/zack.png" alt="profile image">
+                    </figure>
+
+                    <div class="chat-info">
+                        <div class="fx-sb">
+                            <h3 class="chat-name  font-sm  fw-sb">Zack Fox</h3>
+                            <span class="last-message-time  font-xsm">10:49 AM</span>
+                        </div>
+                        <div class="fx-sb">
+                            <p class="last-message  font-sm">Have you ever heard of</p>
+                            <!-- <div>23</div> -->
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+
+        </aside>
+
+        <div class="message-view">
+
+            <div class="message-container-wrap  custom-scroll">
+                <div class="message-container  fx-col  gap-lg">
+                    <div class="message-wrap  first-in-msgs  fx  gap-lg">
+                        <figure class="message-avatar">
+                            <img src="images/caesar.png" alt="caesar chat avatar image">
+                        </figure>
+                        <div class="message-content  fx-col">
+                            <span class="message-sender  font-lg  fw-sb">Caesar</span>
+                            <p class="message   font-lg">lorem ipsum dolor sit amet consectetur adipiscing</p>
+                            <span class="message-time  font-sm">10:36 PM</span>
+                        </div>
+
+                    </div>
+
+                    <div class="message-wrap  last-in-msgs  fx  gap-lg">
+                        <figure class="message-avatar">
+                            <img src="images/caesar.png" alt="caesar chat avatar image">
+                        </figure>
+                        <div class="message-content  fx-col">
+                            <span class="message-sender  font-lg">Caeser</span>
+                            <p class="message   font-lg">lorem ipsum dolor sit </p>
+                            <span class="message-time  font-sm">4:38 AM</span>
+                        </div>
+                    </div>
+
+                    <div class="message-wrap  own">
+                        <!-- <figure class="message-avatar">
+                        <img src="./assets/images/caesar.png" alt="caesar chat avatar image">
+                    </figure> -->
+                        <div class="message-content  fx-col">
+                            <!-- <span class="message-sender">Caesar</span> -->
+                            <p class="message  font-lg  fx-col">Lorem ipsum dolor sit amet consectetur adipiscing, Lorem
+                                ipsum
+                                dolor
+                                sit amet
+                                consectetur adipiscing, Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                            <span class="message-time  font-sm">8:54 AM</span>
+                        </div>
+                    </div>
+
+                    <div class="message-wrap  first-in-msgs  last-in-msgs  fx  gap-lg">
+                        <figure class="message-avatar">
+                            <img src="images/caesar.png" alt="caesar chat avatar image">
+                        </figure>
+                        <div class="message-content  fx-col">
+                            <span class="message-sender  font-lg    fw-sb">Caeser</span>
+                            <p class="message   font-lg">lorem ipsum dolor sit amet consectetur adipiscing</p>
+                            <span class="message-time  font-sm">1:05 PM</span>
+                        </div>
+                    </div>
+
+                    <div class="message-wrap  own">
+                        <div class="message-content  fx-col">
+                            <!-- <span class="message-sender">Caeser</span> -->
+                            <p class="message  font-lg">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                            <span class="message-time  font-sm">8:33 PM</span>
+                        </div>
+                    </div>
+                    <div class="message-wrap  own">
+                        <div class="message-content  fx-col">
+                            <!-- <span class="message-sender">Caeser</span> -->
+                            <p class="message  font-lg">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                            <span class="message-time  font-sm">8:33 PM</span>
+                        </div>
+                    </div>
+                    <div class="message-wrap  own">
+                        <div class="message-content  fx-col">
+                            <!-- <span class="message-sender">Caeser</span> -->
+                            <p class="message  font-lg">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                            <span class="message-time  font-sm">8:33 PM</span>
+                        </div>
+                    </div>
+                    <div class="message-wrap  own">
+                        <div class="message-content  fx-col">
+                            <!-- <span class="message-sender">Caeser</span> -->
+                            <p class="message  font-lg">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                            <span class="message-time  font-sm">8:33 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="message-footer-wrap">
+                <div class="message-footer">
+                    <input class="message-input" type="text" placeholder="Write a message...">
+                    <div class="message-actions  fx-sb">
+                        <div>
+                            <button class="message-actions__btn"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                    height="20" viewBox="0 0 20 20" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M10.0001 2.5C8.61941 2.5 7.50012 3.61929 7.50012 5V10C7.50012 11.3807 8.61941 12.5 10.0001 12.5C11.3808 12.5 12.5001 11.3807 12.5001 10V5C12.5001 3.61929 11.3808 2.5 10.0001 2.5ZM6.25012 5C6.25012 2.92893 7.92905 1.25 10.0001 1.25C12.0712 1.25 13.7501 2.92893 13.7501 5V10C13.7501 12.0711 12.0712 13.75 10.0001 13.75C7.92905 13.75 6.25012 12.0711 6.25012 10V5Z"
+                                        fill="#0E1114" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M10.0001 15C10.3453 15 10.6251 15.2798 10.6251 15.625V18.125C10.6251 18.4702 10.3453 18.75 10.0001 18.75C9.65494 18.75 9.37512 18.4702 9.37512 18.125V15.625C9.37512 15.2798 9.65494 15 10.0001 15Z"
+                                        fill="#0E1114" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M4.33283 10.0043C4.67562 9.96374 4.9864 10.2087 5.02698 10.5515C5.17113 11.7692 5.75705 12.8917 6.67366 13.7062C7.59027 14.5207 8.77386 14.9706 10.0001 14.9706C11.2263 14.9706 12.4099 14.5207 13.3265 13.7062C14.2431 12.8917 14.829 11.7692 14.9731 10.5515C15.0137 10.2087 15.3245 9.96374 15.6673 10.0043C16.0101 10.0449 16.2551 10.3557 16.2145 10.6985C16.0343 12.2201 15.3022 13.6228 14.1568 14.6406C13.0114 15.6584 11.5323 16.2206 10.0001 16.2206C8.46779 16.2206 6.98876 15.6584 5.84336 14.6406C4.69796 13.6228 3.96579 12.2201 3.78564 10.6985C3.74506 10.3557 3.99005 10.0449 4.33283 10.0043Z"
+                                        fill="#0E1114" />
+                                </svg></button>
+                            <button class="message-actions__btn"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                    height="20" viewBox="0 0 20 20" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M11.5646 2.77114C12.159 2.23252 12.9378 1.94312 13.7398 1.96286C14.5417 1.98261 15.3053 2.30998 15.8726 2.87721C16.4398 3.44443 16.7672 4.20806 16.7869 5.01C16.8067 5.81193 16.5173 6.59075 15.9786 7.1852C15.9727 7.19172 15.9667 7.19812 15.9605 7.20438L8.20269 15.0716C8.19446 15.0799 8.186 15.088 8.17732 15.0959C7.82065 15.4191 7.35336 15.5927 6.8722 15.5809C6.39104 15.569 5.93286 15.3726 5.59252 15.0322C5.25219 14.6919 5.05576 14.2337 5.04392 13.7526C5.03207 13.2714 5.20571 12.8041 5.52888 12.4474C5.5346 12.4411 5.54045 12.4349 5.54643 12.4289L12.0542 5.81167C12.2963 5.56557 12.692 5.56227 12.9381 5.80431C13.1842 6.04634 13.1875 6.44206 12.9455 6.68816L6.44815 13.2947C6.34495 13.4125 6.28968 13.5649 6.29354 13.7218C6.29749 13.8822 6.36296 14.0349 6.47641 14.1484C6.58985 14.2618 6.74258 14.3273 6.90297 14.3312C7.0585 14.3351 7.20968 14.2807 7.32711 14.1792L15.0605 6.33678C15.3784 5.98128 15.549 5.51784 15.5373 5.04076C15.5254 4.5596 15.329 4.10142 14.9887 3.76109C14.6483 3.42075 14.1902 3.22433 13.709 3.21248C13.2333 3.20077 12.7711 3.37037 12.416 3.68655L4.66837 11.5434C4.08317 12.1286 3.75439 12.9223 3.75439 13.7499C3.75439 14.5775 4.08316 15.3712 4.66836 15.9564C5.25355 16.5416 6.04725 16.8704 6.87485 16.8704C7.70245 16.8704 8.49615 16.5416 9.08135 15.9564L15.4959 9.55744C15.7403 9.31366 16.1361 9.31414 16.3798 9.55852C16.6236 9.80289 16.6231 10.1986 16.3788 10.4424L9.96523 16.8403C9.14561 17.6599 8.03397 18.1204 6.87485 18.1204C5.71573 18.1204 4.60409 17.6599 3.78447 16.8403C2.96485 16.0207 2.50439 14.909 2.50439 13.7499C2.50439 12.5916 2.96425 11.4806 3.78286 10.6612L11.5392 2.79546C11.5474 2.78711 11.5559 2.77901 11.5646 2.77114Z"
+                                        fill="#0E1114" />
+                                </svg></button>
+                        </div>
+                        <button class="send-btn  font-sm  fw-sb">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="drawer-column">
+
+            <div class="sender-details  fx-sb">
+                <div class="fx-cc  gap-sm">
+                    <figure class="sender-avatar  lh-0">
+                        <img src="images/caesar.png" alt="caesar profile photo">
+                    </figure>
+                    <h3 class="font-lg  fw-sb">Caesar</h3>
+                </div>
+                <button class="close-btn  lh-0">
+                    <img src="images/close-menu.png" alt="close menu png">
+                </button>
+            </div>
+
+            <div class="sender-bio font-sm  fx-col  gap-md">
+                <div class="fx-col  gap-sm">
+                    <h3 class="font-sm">Username</h3>
+                    <span>@Caesar</span>
+                </div>
+
+                <div class="fx-col  gap-sm">
+                    <h3 class="font-sm">Bio</h3>
+                    <p>I like talk shows</p>
+                </div>
+            </div>
+
+            <div class="notification-control  fx-sb">
+                <span class="font-sm  fw-sb">Notifications</span>
+                <svg class="clickable" xmlns="http://www.w3.org/2000/svg" width="28" height="16" viewBox="0 0 28 16"
+                    fill="none">
+                    <rect width="28" height="16" rx="8" fill="#0086EA" />
+                    <rect x="14" y="2" width="12" height="12" rx="6" fill="white" />
+                </svg>
+            </div>
+
+            <div class="chat-actions  fx-col  gap-md">
+                <a class="font-sm" href="javascript: void(0)">Block user</a>
+                <a class="font-sm" href="javascript: void(0)">Clear history</a>
+                <a class="font-sm" href="javascript: void(0)">Delete conversation</a>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>

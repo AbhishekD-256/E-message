@@ -1,0 +1,66 @@
+%flex {
+    display: flex;
+}
+
+%cross-center {
+    align-items: center;
+}
+
+.fx {
+    @extend %flex;
+
+    &-cc {
+        @extend %flex;
+        @extend %cross-center;
+    }
+
+    &-sb {
+        @extend %flex;
+        @extend %cross-center;
+        justify-content: space-between;
+    }
+
+    &-col {
+        @extend %flex;
+        flex-direction: column;
+    }
+
+}
+
+.gap {
+    &-sm {
+        gap: 8px;
+    }
+    &-md {
+        gap: 16px;
+    }
+    &-lg {
+        gap: 24px;
+    }
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.lh-0 {
+    line-height: 0;
+}
+
+.pd-t16 {
+    padding-top: 16px;
+}
+
+.custom-scroll {
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+
+    &:hover::-webkit-scrollbar-thumb {
+        background-color: $border-primary-color;
+    }
+}

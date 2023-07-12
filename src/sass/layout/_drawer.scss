@@ -1,0 +1,51 @@
+.drawer-column {
+    flex-shrink: 0;
+    z-index: 1;
+    width: 280px;
+    height: 100%;
+    padding: 16px 24px 24px 24px;
+    border-radius: 16px 0px 0px 0px;
+    border-left: 1px solid $border-primary-color;
+    background:  $light-bg-primary;
+    box-shadow: -6px 0px 16px 0px rgba(2, 17, 37, 0.04), -2px 0px 8px 0px rgba(2, 17, 37, 0.08), 0px 0px 4px 0px rgba(2, 17, 37, 0.08);
+
+}
+
+.sender {
+    &-avatar {
+      img {
+        @include rounded-box(24px, 24px);
+        object-fit: cover;
+      }
+    }
+    
+    &-details {
+        padding-bottom: $spacing-md;
+        border-bottom: 1px solid  $border-primary-color;
+    }
+
+    &-bio {
+        padding: $spacing-md 0;
+    }
+}
+
+
+.close-btn {
+    background: transparent;
+    @include size(20px, 20px);
+
+    img {
+        width: 100%;
+    }
+}
+
+.notification-control {
+    padding: $spacing-md 0;
+    border-bottom: 1px solid  $border-primary-color;
+    border-top: 1px solid  $border-primary-color;
+}
+
+.chat-actions {
+    padding-top: $spacing-md;
+    color: #0086EA;
+}

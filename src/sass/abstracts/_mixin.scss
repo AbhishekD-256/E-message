@@ -1,0 +1,20 @@
+@mixin position-abs($top,$left) {
+    position: absolute;
+    left: $left;
+    top: $top;
+}
+
+@mixin size($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin rounded-box($width, $height) {
+    @include size($width,$height);
+    border-radius: 50%;
+}
+
+@mixin font-value($size, $height) {
+    font-size: $size;
+    line-height: $height;
+}
