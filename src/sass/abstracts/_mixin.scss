@@ -4,6 +4,11 @@
     top: $top;
 }
 
+@mixin position-sticky($top) {
+    position: sticky;
+    top: $top;
+}
+
 @mixin size($w, $h) {
     width: $w;
     height: $h;

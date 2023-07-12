@@ -8,7 +8,7 @@
 
     &-view {
         flex-grow: 1;
-        padding-top: 8px;
+        padding-top: $spacing-sm;
         transform: rotate(0);
 
     }
@@ -27,10 +27,16 @@
         align-self: flex-end;
         visibility: hidden;
     }
+
     &-sender {
        color:  #1D9745;
        display: none;
     }
+    
+    &-time {
+        color: $text-secondary-color;
+    }
+
     &-wrap {
         align-self:flex-start ;
         &.first-in-msgs {
@@ -76,10 +82,12 @@
             background: $light-bg-primary;
         }
     }
+
     &-input {
         padding: 14px 12px;
         width: 100%;
     }
+
     &-actions {
         padding: 8px 12px;
         background: #F8F9FA;
@@ -99,4 +107,13 @@
             color: #9E9E9E;
         }
     }
+}
+
+.sticky-date {
+    @include position-sticky(10px);
+    align-self: center;
+    padding: 2px 8px;
+    color: $light-bg-primary;
+    background-color: #8FA0AF;
+    border-radius: 999px;
 }
