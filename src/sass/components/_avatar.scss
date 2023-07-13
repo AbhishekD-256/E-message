@@ -1,3 +1,15 @@
-// .avatar {
-    
-// }
+.avatar {
+    overflow: hidden;
+    position: relative;
+    &--sm {
+        @include rounded-box(24px, 24px);
+    }
+
+    &--md {
+        @include rounded-box(32px, 32px);
+    }
+
+    &--lg {
+        @include rounded-box(40px, 40px);
+    }
+}

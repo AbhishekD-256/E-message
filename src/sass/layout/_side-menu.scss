@@ -64,9 +64,7 @@
             }
 
             &.online {
-                .chat-avatar::after {
-                    content: '';
-                    display: block;
+                .indicator {
                     @include position(absolute, $top:30px, $left: 30px);
                     @include rounded-box(8px, 8px);
                     border: 1px solid $light-bg-primary;
@@ -89,11 +87,7 @@
     }
 
     &-avatar {
-        position: relative;
-        img {
-            @include rounded-box(40px, 40px);
-            object-fit: cover;
-        }
+        @include position(relative);
     }
 }
 

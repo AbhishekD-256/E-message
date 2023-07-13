@@ -1,8 +1,3 @@
-@mixin position-sticky($top) {
-    position: sticky;
-    top: $top;
-}
-
 @mixin position($pos, $top: auto, $bottom: auto, $left: auto, $right: auto) {
     position: $pos;
     top: $top;

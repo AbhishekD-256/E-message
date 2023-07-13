@@ -11,14 +11,7 @@
 
 }
 
-.sender {
-    &-avatar {
-      img {
-        @include rounded-box(24px, 24px);
-        object-fit: cover;
-      }
-    }
-    
+.sender {    
     &-details {
         padding-bottom: $spacing-md;
         border-bottom: 1px solid  $border-primary-color;
