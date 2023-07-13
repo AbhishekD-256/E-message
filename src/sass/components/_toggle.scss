@@ -1,0 +1,32 @@
+.toggle {
+    border-radius: 999px;
+    background: var(--intaractive-color);
+    padding: 2px; 
+    cursor: pointer;
+
+    .slider {
+        background: var(--background-primary);
+        transform: translateX(100%);
+    }
+
+    &--lg {
+        width: 36px;
+        .slider {
+        @include rounded-box(16px, 16px)
+        }
+    }
+
+    &--sm {
+       width: 28px;
+
+       .slider {
+        @include rounded-box(12px, 12px);
+       }
+    }
+
+    &.clicked {
+        .slider {
+            transform: translateX(0);
+        }
+    }
+}

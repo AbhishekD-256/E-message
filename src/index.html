@@ -29,11 +29,15 @@
             <div class="logo  fw-sb">E-Message</div>
         </div>
 
-        <div class="header__right  fx-sb">
+        <div class="fx-sb  fx-grow">
             <div class="sender-status">
                 <span class="chat-full-name  font-sm  fw-sb  clickable">Caeser</span> last seen 5 min ago
             </div>
             <div class="fx-cc">
+                <div class="toggle  toggle--lg  js-theme-toggle" title="change theme">
+                    <div class="slider"></div>
+                </div>
+
                 <button class="settings-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -266,9 +270,9 @@
 
         </aside>
 
-        <section class="message-view  fx-col">
+        <section class="message-view  fx-col  fx-grow">
 
-            <div class="message-container-wrap  custom-scroll">
+            <div class="message-container-wrap  custom-scroll  fx-grow">
                 <div class="message-container  fx-col  gap-lg">
                     <div class="message-wrap  first-in-msgs  fx  gap-lg">
                         <figure class="message-avatar  avatar  avatar--lg">
@@ -409,11 +413,9 @@
 
             <div class="notification-control  fx-sb  pd-v-16">
                 <span class="font-sm  fw-sb">Notifications</span>
-                <svg class="clickable" xmlns="http://www.w3.org/2000/svg" width="28" height="16" viewBox="0 0 28 16"
-                    fill="none">
-                    <rect width="28" height="16" rx="8" fill="#0086EA" />
-                    <rect x="14" y="2" width="12" height="12" rx="6" fill="white" />
-                </svg>
+                <div class="toggle  toggle--sm">
+                    <div class="slider"></div>
+                </div>
             </div>
 
             <div class="pd-t-16  fx-col  gap-md">

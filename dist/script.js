@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sass/main.scss */ \"./src/sass/main.scss\");\n\r\n\n\n//# sourceURL=webpack://webapp/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sass/main.scss */ \"./src/sass/main.scss\");\n\r\n\r\nconst themeToggleBtn = document.querySelector(\".js-theme-toggle\");\r\n\r\nthemeToggleBtn.addEventListener(\"click\", function () {\r\n  this.classList.toggle(\"clicked\");\r\n  document.body.classList.toggle(\"darkmode\");\r\n});\r\n\n\n//# sourceURL=webpack://webapp/./src/index.js?");
 
 /***/ })
 

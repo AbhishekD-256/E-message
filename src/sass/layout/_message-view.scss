@@ -6,16 +6,8 @@
     max-width: 480px;
     word-break: break-all;
 
-    &-view {
-        padding-top: 8px 0;
-        flex-grow: 1;
-        justify-content: space-between;
-    }
-
     &-container {
-        flex: 1;
         max-width: 680px;
-        // height: 600px;
         margin: 0 auto;
 
         &-wrap {            
