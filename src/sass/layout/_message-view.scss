@@ -1,7 +1,7 @@
 
 .message {
     padding: 16px;
-    background: #EEF1F4;
+    background: var(--background-tertiary);
     border-radius: 16px 16px 16px 0px;
     max-width: 480px;
     word-break: break-all;
@@ -19,6 +19,7 @@
         margin: 0 auto;
 
         &-wrap {
+            // background: var(--background-primary);
             overflow-y: auto;
         }
     }
@@ -54,7 +55,7 @@
             align-self: flex-end;
 
             .message {
-                background: #E8F2FE;
+                background: var(--background-tertiary-info);
                 border-radius: 16px 16px 0px 16px;
 
                 &-time {
@@ -71,7 +72,7 @@
         max-width: 520px;
         margin: 0 auto;
         border-radius: 12px;
-        border: 1px solid $border-primary-color;
+        border: 1px solid var(--border-primary);
         overflow: hidden;
 
         &-wrap {
@@ -79,18 +80,19 @@
             padding-bottom: 40px;
             bottom: 0;
             width: 100%;
-            background: $light-bg-primary;
+            // background: var(--background-primary);
         }
     }
 
     &-input {
         padding: 14px 12px;
         width: 100%;
+        background: var(--background-primary);
     }
 
     &-actions {
         padding: 8px 12px;
-        background: #F8F9FA;
+        background: var(--background-secondary);
 
         button {
             background: transparent;
@@ -98,13 +100,17 @@
 
         &__btn {
             padding: 6px;
+
+            svg {
+                fill: var(--text-primary-color)
+            }
         }
 
         .send-btn {
             padding: 6px 12px;
             border-radius: 8px;
-            border: 1px solid #D4D4D4;
-            color: #9E9E9E;
+            border: 1px solid var(--border-primary);
+            color: $text-secondary-color;
         }
     }
 }
@@ -113,7 +119,7 @@
     @include position(sticky, $top: 10px);
     align-self: center;
     padding: 2px 8px;
-    color: $light-bg-primary;
+    color: var(--background-primary) ;
     background-color: #8FA0AF;
     border-radius: 999px;
 }

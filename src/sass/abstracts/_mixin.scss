@@ -20,3 +20,27 @@
     font-size: $size;
     line-height: $height;
 }
+
+@mixin theme($theme) {
+    @if $theme == light {
+        --background-primary: #FFFFFF;
+        --background-secondary: #F8F9FA;
+        --background-tertiary: #EEF1F4;
+        --background-tertiary-info: #E8F2FE;
+        --text-primary-color: #0E1114;
+        --border-primary: #CDD5DE ;
+        --intaractive-color: #0086ea;
+        --success-color: #1D9745;
+    }
+
+    @else if $theme == dark {
+        --background-primary: #21262B;
+        --background-secondary: #353C43;
+        --background-tertiary: #4A545C;
+        --background-tertiary-info:rgba(0, 134, 234, 0.16);
+        --text-primary-color: #EEF1F4;
+        --border-primary:  #4A545C;
+        --interactive-color: #53A0FF;
+        --success-color: #157B2F;
+    }
+}

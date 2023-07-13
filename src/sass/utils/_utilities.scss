@@ -73,7 +73,7 @@ $flex-gaps : (
     }
 
     &:hover::-webkit-scrollbar-thumb {
-        background-color: $border-primary-color;
+        background-color: var(--border-primary);
     }
 }
 

@@ -5,15 +5,15 @@
     height: 100%;
     padding: 16px 24px 24px 24px;
     border-radius: 16px 0px 0px 0px;
-    border-left: 1px solid $border-primary-color;
-    background:  $light-bg-primary;
+    border-left: 1px solid var(--border-primary);
+    // background:  var(--background-primary);
     box-shadow: -6px 0px 16px 0px rgba(2, 17, 37, 0.04), -2px 0px 8px 0px rgba(2, 17, 37, 0.08), 0px 0px 4px 0px rgba(2, 17, 37, 0.08);
 
 }
 
 .sender {    
     &-details {
-        border-bottom: 1px solid  $border-primary-color;
+        border-bottom: 1px solid  var(--border-primary);
     }
 }
 
@@ -28,8 +28,8 @@
 }
 
 .notification-control {
-    border-bottom: 1px solid  $border-primary-color;
-    border-top: 1px solid  $border-primary-color;
+    border-bottom: 1px solid  var(--border-primary);
+    border-top: 1px solid  var(--border-primary);
 }
 
 .action-link {
