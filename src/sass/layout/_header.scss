@@ -21,16 +21,7 @@
         background: transparent;
         padding: 12px $spacing-sm;
     }
-
-    .user-image {
-        padding: 12px;
-
-        img {
-            @include rounded-box(32px, 32px);
-            object-fit: cover;
-        }
-    }
-
+    
     .sender-status {
         color: $text-secondary-color;
     }

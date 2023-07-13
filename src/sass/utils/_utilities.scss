@@ -27,15 +27,17 @@
 
 }
 
+$flex-gaps : (
+    sm: 8px,
+    md: 16px,
+    lg: 24px
+);
+    
 .gap {
-    &-sm {
-        gap: 8px;
-    }
-    &-md {
-        gap: 16px;
-    }
-    &-lg {
-        gap: 24px;
+    @each $var, $gap in $flex-gaps {
+        &-#{$var} {
+            gap: $gap;
+        }
     }
 }
 
@@ -47,8 +49,18 @@
     line-height: 0;
 }
 
-.pd-t16 {
-    padding-top: 16px;
+.pd {
+    &-t-16 {
+        padding-top: $spacing-md;
+    }
+
+    &-v-16 {
+        padding: $spacing-md 0;
+    }
+    
+    &-b-16 {
+        padding-bottom: $spacing-md;
+    }
 }
 
 .custom-scroll {

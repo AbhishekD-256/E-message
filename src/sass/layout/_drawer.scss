@@ -13,13 +13,7 @@
 
 .sender {    
     &-details {
-        padding-bottom: $spacing-md;
         border-bottom: 1px solid  $border-primary-color;
-
-    }
-
-    &-bio {
-        padding: $spacing-md 0;
     }
 }
 
@@ -34,14 +28,10 @@
 }
 
 .notification-control {
-    padding: $spacing-md 0;
     border-bottom: 1px solid  $border-primary-color;
     border-top: 1px solid  $border-primary-color;
 }
 
-.chat-actions {
-    padding-top: $spacing-md;
-    .action-link {
-        color: #0086EA;
-    }
+.action-link {
+    color: #0086EA;
 }
