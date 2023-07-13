@@ -7,19 +7,18 @@
     word-break: break-all;
 
     &-view {
+        padding-top: 8px 0;
         flex-grow: 1;
-        padding-top: $spacing-sm;
-        transform: rotate(0);
-
+        justify-content: space-between;
     }
 
     &-container {
+        flex: 1;
         max-width: 680px;
-        height: 600px;
+        // height: 600px;
         margin: 0 auto;
 
-        &-wrap {
-            // background: var(--background-primary);
+        &-wrap {            
             overflow-y: auto;
         }
     }
@@ -69,25 +68,21 @@
     //*********** Message-view-Footer ************//
 
     &-footer {
-        max-width: 520px;
-        margin: 0 auto;
+        margin: 0 34px 16px;
         border-radius: 12px;
         border: 1px solid var(--border-primary);
         overflow: hidden;
-
-        &-wrap {
-            position: fixed;
-            padding-bottom: 40px;
-            bottom: 0;
-            width: 100%;
-            // background: var(--background-primary);
-        }
     }
 
     &-input {
+        resize: none;
         padding: 14px 12px;
         width: 100%;
         background: var(--background-primary);
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 
     &-actions {
@@ -100,10 +95,6 @@
 
         &__btn {
             padding: 6px;
-
-            svg {
-                fill: var(--text-primary-color)
-            }
         }
 
         .send-btn {
