@@ -64,6 +64,10 @@ $flex-gaps : (
     &-b-16 {
         padding-bottom: $spacing-md;
     }
+    
+    &-16 {
+        padding: 16px;
+    }
 }
 
 .custom-scroll {

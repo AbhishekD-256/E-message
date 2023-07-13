@@ -5,6 +5,7 @@
     cursor: pointer;
 
     .slider {
+        @include transition-ease(transform);
         background: var(--background-primary);
         transform: translateX(100%);
     }

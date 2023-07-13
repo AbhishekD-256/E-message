@@ -44,3 +44,7 @@
         --success-color: #157B2F;
     }
 }
+
+@mixin transition-ease($prop) {
+    transition: $prop 0.3s ease-in-out;
+}
