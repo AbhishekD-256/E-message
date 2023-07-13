@@ -1,12 +1,14 @@
-@mixin position-abs($top,$left) {
-    position: absolute;
-    left: $left;
-    top: $top;
-}
-
 @mixin position-sticky($top) {
     position: sticky;
     top: $top;
+}
+
+@mixin position($pos, $top: auto, $bottom: auto, $left: auto, $right: auto) {
+    position: $pos;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
 }
 
 @mixin size($w, $h) {

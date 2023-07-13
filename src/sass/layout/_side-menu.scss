@@ -8,7 +8,7 @@
     z-index: 1;
     
     &__header {
-        @include position-sticky(0);
+        @include position(sticky, $top:0);
         background:  $light-bg-primary;
         padding: 12px 24px 8px;
         z-index: 10;
@@ -67,7 +67,7 @@
                 .chat-avatar::after {
                     content: '';
                     display: block;
-                    @include position-abs(30px, 30px);
+                    @include position(absolute, $top:30px, $left: 30px);
                     @include rounded-box(8px, 8px);
                     border: 1px solid $light-bg-primary;
                     background: #1D9745;

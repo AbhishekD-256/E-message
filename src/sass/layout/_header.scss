@@ -25,7 +25,7 @@
 
     .sender-status {
         color: $text-secondary-color;
-        @include position-abs(16px, 320px);
+        @include position(absolute, $top:16px, $left:320px);
     }
 
     .chat-full-name {

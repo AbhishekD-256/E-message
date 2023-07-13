@@ -110,7 +110,7 @@
 }
 
 .sticky-date {
-    @include position-sticky(10px);
+    @include position(sticky, $top: 10px);
     align-self: center;
     padding: 2px 8px;
     color: $light-bg-primary;
