@@ -45,10 +45,25 @@ contacts.forEach((contact) => {
   chatList.insertAdjacentHTML("beforeend", html);
 });
 
+function changeUserDetails(user) {
+  drawerCol.querySelector(".user-img").src = user.image;
+  drawerCol.querySelector(".user-fullname").textContent = user.name;
+  drawerCol.querySelector(".user-name").textContent = user.username;
+  drawerCol.querySelector(".user-bio").textContent = user.bio;
+}
+
 chatList.addEventListener("click", function (e) {
   const selectedContact = e.target.closest(".chat-list__item");
   document
     .querySelectorAll(".chat-list__item")
     .forEach((item) => item.classList.remove("selected"));
+
   selectedContact.classList.add("selected");
+
+  const userDetails = contactData.contacts.filter((contact) => {
+    return (
+      contact.name === selectedContact.querySelector(".chat-name").textContent
+    );
+  });
+  changeUserDetails(...userDetails);
 });
