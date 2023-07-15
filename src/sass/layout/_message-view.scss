@@ -4,20 +4,6 @@
     max-width: 480px;
     word-break: break-all;
 
-    &.own {
-        align-self: flex-end;
-
-        .message {
-            background: var(--background-tertiary-info);
-            border-radius: 16px 16px 0px 16px;
-
-            &-time {
-                align-self: flex-end;
-            }
-        }
-
-    }
-
     &-container {
         max-width: 680px;
         margin: 0 auto;
@@ -51,6 +37,19 @@
             }
         }
         
+        &.own {
+            align-self: flex-end;
+    
+            .message {
+                background: var(--background-tertiary-info);
+                border-radius: 16px 16px 0px 16px;
+    
+                &-time {
+                    align-self: flex-end;
+                }
+            }
+    
+        }
     }
 
     //*********** Message-view-Footer ************//
