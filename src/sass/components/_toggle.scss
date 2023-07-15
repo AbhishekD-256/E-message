@@ -7,7 +7,7 @@
     .slider {
         @include transition-ease(transform);
         background: var(--background-primary);
-        transform: translateX(100%);
+        @include vendor-prefix(transform,translateX(100%), -webkit, -moz, -o, -ms);
     }
 
     &--lg {
@@ -27,7 +27,7 @@
 
     &.clicked {
         .slider {
-            transform: translateX(0);
+            @include vendor-prefix(transform,translateX(0), -webkit, -moz, -o, -ms);
         }
     }
 }

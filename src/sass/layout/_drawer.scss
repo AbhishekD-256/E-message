@@ -1,8 +1,6 @@
 .drawer-column {
-    flex-shrink: 0;
-    z-index: 1;
-    width: 280px;
-    height: 100%;
+    @extend %noshrink-and-layerabove;
+    @include size(280px, 100%);
     border-radius: 16px 0px 0px 0px;
     border-left: 1px solid var(--border-primary);
     box-shadow: -6px 0px 16px 0px rgba(2, 17, 37, 0.04), -2px 0px 8px 0px rgba(2, 17, 37, 0.08), 0px 0px 4px 0px rgba(2, 17, 37, 0.08);
@@ -31,5 +29,5 @@
 }
 
 .action-link {
-    color: #0086EA;
+    color: $info-color;
 }
