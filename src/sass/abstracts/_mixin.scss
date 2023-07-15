@@ -48,3 +48,20 @@
 @mixin transition-ease($prop) {
     transition: $prop 0.3s ease-in-out;
 }
+
+@mixin vendor-prefix($prop, $value, $prefixes...) {
+    #{$prop}: $value;
+    
+    @each $prefix in $prefixes {
+      @if $prefix == -webkit {
+        -webkit-#{$prop}: $value;
+      } @else if $prefix == -moz {
+        -moz-#{$prop}: $value;
+      } @else if $prefix == -ms {
+        -ms-#{$prop}: $value;
+      } @else if $prefix == -o {
+        -o-#{$prop}: $value;
+      }
+    }
+  }
+  

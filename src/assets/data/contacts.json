@@ -31,7 +31,8 @@
         "last_message_time": "02:15 PM",
         "online": true,
         "unread_messages": 0,
-        "muted": false
+        "muted": false,
+        "selected": true
       },
       {
         "name": "Maria Garcia",

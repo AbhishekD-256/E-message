@@ -13,11 +13,11 @@ themeToggleBtn.addEventListener("click", function () {
 const { contacts } = contactData;
 
 contacts.forEach((contact) => {
-  const html = `<li class= "chat-list__item  clickable  fx  gap-sm  ${
+  const html = `<li class= "chat-list__item  clickable  fx  gap-sm  pd-hv ${
     contact.online ? "online" : ""
   } ${contact.muted ? "muted" : ""} ${
     contact.unread_messages > 0 ? "unread" : ""
-  }">
+  } ${contact.selected ? "selected" : ""}">
   <div class="chat-avatar">
       <figure class="avatar  avatar--lg  lh-0">
           <img class="fill-image" src="${contact.image}" alt="${
@@ -28,13 +28,15 @@ contacts.forEach((contact) => {
   </div>
   <div class="chat-info">
       <div class="fx-sb">
-          <h3 class="chat-name  font-sm  fw-sb">${contact.name}</h3>
-          <span class="last-message-time  font-xsm">${
-            contact.last_message_time
-          }</span>
+          <h3 class="chat-name  font-sm  fw-sb  text-truncate">${
+            contact.name
+          }</h3>
+          <span class="sec-color  font-xsm">${contact.last_message_time}</span>
       </div>
       <div class="fx-sb">
-          <p class="last-message  font-sm">${contact.last_message}</p>
+          <p class="last-message  sec-color  font-sm  text-truncate">${
+            contact.last_message
+          }</p>
           <div class="unread-msgs  font-xsm  ${
             contact.unread_messages <= 0 ? "hide" : ""
           }">${contact.unread_messages}</div>
@@ -43,13 +45,20 @@ contacts.forEach((contact) => {
 </li>`;
 
   chatList.insertAdjacentHTML("beforeend", html);
+  changeUserDetails(
+    ...contacts.filter((contact) => contact["selected"] === true)
+  );
 });
 
 function changeUserDetails(user) {
-  drawerCol.querySelector(".user-img").src = user.image;
-  drawerCol.querySelector(".user-fullname").textContent = user.name;
-  drawerCol.querySelector(".user-name").textContent = user.username;
-  drawerCol.querySelector(".user-bio").textContent = user.bio;
+  document.querySelectorAll(".js-user-img").forEach((img) => {
+    img.src = user.image;
+  });
+  document.querySelectorAll(".js-user-fullname").forEach((n) => {
+    n.textContent = user.name;
+  });
+  drawerCol.querySelector(".js-user-name").textContent = user.username;
+  drawerCol.querySelector(".js-user-bio").textContent = user.bio;
 }
 
 chatList.addEventListener("click", function (e) {

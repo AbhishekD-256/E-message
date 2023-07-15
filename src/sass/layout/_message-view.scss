@@ -1,6 +1,4 @@
-
 .message {
-    padding: 16px;
     background: var(--background-tertiary);
     border-radius: 16px 16px 16px 0px;
     max-width: 480px;
@@ -25,10 +23,6 @@
        display: none;
     }
     
-    &-time {
-        color: $text-secondary-color;
-    }
-
     &-wrap {
         align-self:flex-start ;
         &.first-in-msgs {
@@ -93,7 +87,6 @@
             padding: 6px 12px;
             border-radius: 8px;
             border: 1px solid var(--border-primary);
-            color: $text-secondary-color;
         }
     }
 }

@@ -2,7 +2,6 @@
     @include size(320px, 100%);
     flex-shrink: 0;
     border-right: 1px solid  var(--border-primary);
-    // background:  var(--background-primary);
     box-shadow: 6px 0px 16px 0px rgba(2, 17, 37, 0.04), 2px 0px 8px 0px rgba(2, 17, 37, 0.04), 0px 0px 4px 0px rgba(2, 17, 37, 0.04);
     overflow-y: auto;
     z-index: 1;
@@ -17,8 +16,6 @@
 
 
 .search-bar {
-    // background:  var(--background-primary);
-
         input {
         border:1px solid var(--border-primary);
         border-radius: $spacing-sm;
@@ -42,8 +39,6 @@
     &-list {
 
         &__item {
-            padding: 16px 24px;
-
             &:hover,&.selected {
                 background:  var(--background-secondary);
             }
@@ -71,14 +66,6 @@
                     background: var(--success-color);
                 }
             }
-
-            .last-message {
-                color: $text-secondary-color;
-
-                &-time {
-                    color: $text-tertiary-color;
-                }
-            }
         }
     }
 
@@ -93,7 +80,4 @@
 
 .chat-name, .last-message {
     max-width: 162px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
 }
