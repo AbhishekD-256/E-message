@@ -31,9 +31,9 @@
 }
 
 $flex-gaps : (
-    sm: 8px,
-    md: 16px,
-    lg: 24px
+    sm: $spacing-sm,
+    md: $spacing-md,
+    lg: $spacing-lg
 );
     
 .gap {
@@ -70,7 +70,7 @@ $flex-gaps : (
     }
 
     &-hv {
-        padding: 16px 24px;
+        padding: $spacing-md $spacing-lg;
     }
 }
 

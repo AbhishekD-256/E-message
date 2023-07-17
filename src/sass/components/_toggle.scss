@@ -6,14 +6,15 @@
 
     .slider {
         @include transition-ease(transform);
-        background: var(--background-primary);
         @include vendor-prefix(transform,translateX(100%), -webkit, -moz, -o, -ms);
+        background: var(--background-primary);
+
     }
 
     &--lg {
         width: 36px;
         .slider {
-        @include rounded-box(16px, 16px)
+            @include rounded-box(16px, 16px)
         }
     }
 
@@ -21,7 +22,7 @@
        width: 28px;
 
        .slider {
-        @include rounded-box(12px, 12px);
+            @include rounded-box(12px, 12px);
        }
     }
 

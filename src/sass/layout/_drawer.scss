@@ -15,8 +15,8 @@
 
 
 .close-btn {
-    background: transparent;
     @include size(20px, 20px);
+    background: transparent;
 
     img {
         width: 100%;

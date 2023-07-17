@@ -55,7 +55,7 @@
     //*********** Message-view-Footer ************//
 
     &-footer {
-        margin: 0 34px 16px;
+        margin: 0 34px $spacing-md;
         border-radius: 12px;
         border: 1px solid var(--border-primary);
         overflow: hidden;
@@ -73,7 +73,7 @@
     }
 
     &-actions {
-        padding: 8px 12px;
+        padding: $spacing-sm 12px;
         background: var(--background-secondary);
 
         button {
@@ -95,7 +95,7 @@
 .sticky-date {
     @include position(sticky, $top: 10px);
     align-self: center;
-    padding: 2px 8px;
+    padding: 2px $spacing-sm;
     color: var(--background-primary) ;
     background: $light-bg-color;
     border-radius: 999px;

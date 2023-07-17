@@ -8,7 +8,7 @@
     &__header {
         @include position(sticky, $top:0);
         background:  var(--background-primary);
-        padding: 12px 24px 8px;
+        padding: 12px $spacing-lg $spacing-sm;
         z-index: 10;
     }
 }
@@ -18,7 +18,7 @@
         input {
         border:1px solid var(--border-primary);
         border-radius: $spacing-sm;
-        padding: 6px 6px 6px 24px;
+        padding: 6px 6px 6px $spacing-lg;
         width: 100%;
         background: url('https://ik.imagekit.io/abhiimages/magnifier-icon.svg?updatedAt=1689142077028') no-repeat top 4px left 4px / 20px ;
         &:focus {
