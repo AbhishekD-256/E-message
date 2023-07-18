@@ -38,8 +38,29 @@
     &-list {
 
         &__item {
+            position: relative;
+            .remove-list {
+                @include position(absolute, $top: 10px, $right:2px);
+                @include rounded-box(20px, 20px);
+                transform: translateY(-50%);
+                display: none;
+                font-size: 10px;
+                line-height: 20px;
+                text-align: center;
+                background: var(--background-tertiary);
+
+                &:hover{
+                    background-color: rgba(255, 0, 0, 0.34);
+                }
+            }
+
             &:hover,&.selected {
                 background:  var(--background-secondary);
+            }
+            &:hover {
+                .remove-list {
+                    display: block
+                }
             }
 
             &.unread {
