@@ -7,7 +7,37 @@
 
 }
 
-.sender {    
+%inputs-styling {
+    width: 100%;
+    border: 1px solid var(--border-primary);
+    border-radius: 6px;
+    padding: $spacing-sm;
+    background: var(--background-primary);
+    font-size: 12px;
+}
+.change {
+    &-name {
+        @extend %inputs-styling
+    }
+    &-bio {
+        @extend %inputs-styling;
+        resize: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &-save-btn {
+        @extend %inputs-styling;
+        width: 50%;
+
+        &:hover {
+            background: var(--background-secondary);
+        }
+    }
+}
+
+.sender,.my-profile {    
     &-details {
         border-bottom: 1px solid  var(--border-primary);
     }

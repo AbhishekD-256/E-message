@@ -1,9 +1,9 @@
 import "./sass/main.scss";
 import contactData from "./assets/data/contacts.json";
 
-const themeToggleBtn = document.querySelector(".js-theme-toggle");
-const chatList = document.querySelector(".chat-list");
-const drawerCol = document.querySelector(".drawer-column");
+const themeToggleBtn = document.getElementById("js-theme-toggle");
+const chatList = document.getElementById("chat-list");
+const drawerCol = document.getElementById("js-drawer-col");
 const searchInput = document.getElementById("search-input");
 
 const { contacts } = contactData;
@@ -20,7 +20,7 @@ themeToggleBtn.addEventListener("click", function () {
 function renderContacts(contacts) {
   chatList.innerHTML = "";
   if (contacts.length === 0)
-    chatList.innerHTML = '<i class= "pd-16"> Ayyoo!! no User</i>';
+    chatList.innerHTML = '<p class= "pd-hv"> Ayyoo!! no User</p>';
   contacts.forEach((contact) => {
     const html = `<li class= "chat-list__item  cur-pointer  fx  gap-sm  pd-hv ${
       contact.online ? "online" : ""
@@ -64,22 +64,57 @@ function renderContacts(contacts) {
 
 //================= Change User-details ===================//
 
-function changeUserDetails(user) {
-  const userImages = document.querySelectorAll(".js-user-img");
-  const userNames = document.querySelectorAll(".js-user-fullname");
+function renderDrawerCol(user) {
+  drawerCol.innerHTML = `<div class="sender-details  fx-sb  pd-b-16">
+  <div class="fx-cc  gap-sm">
+      <figure class="avatar  avatar--sm  lh-0">
+          <img class="js-user-img  fill-image" alt="caesar profile photo"  src="${user.image}">
+      </figure>
+      <h3 class="js-user-fullname  font-lg  fw-sb">${user.name}</h3>
+  </div>
+  <button class="close-btn  lh-0">
+      <img src="images/close-menu.png" alt="close menu png">
+  </button>
+</div>
+
+<div class="font-sm  fx-col  gap-md  pd-v-16">
+  <div class="fx-col  gap-sm">
+      <h3 class="font-sm">Username</h3>
+      <span class="js-user-name">${user.username}</span>
+  </div>
+
+  <div class="fx-col  gap-sm">
+      <h3 class="font-sm">Bio</h3>
+      <p class="js-user-bio">${user.name}</p>
+  </div>
+</div>
+
+<div class="notification-control  fx-sb  pd-v-16">
+  <span class="font-sm  fw-sb">Notifications</span>
+  <div class="toggle  toggle--sm">
+      <div class="slider"></div>
+  </div>
+</div>
+
+<div class="pd-t-16  fx-col  gap-md">
+  <a class="font-sm  action-link" href="javascript: void(0)">Block user</a>
+  <a class="font-sm  action-link" href="javascript: void(0)">Clear history</a>
+  <a class="font-sm  action-link" href="javascript: void(0)">Delete conversation</a>
+</div>`;
+  const userImages = [...document.getElementsByClassName("js-user-img")];
+  const userNames = [...document.getElementsByClassName("js-user-fullname")];
   userImages.forEach((img) => {
     img.src = user.image;
   });
   userNames.forEach((n) => {
     n.textContent = user.name;
   });
-  drawerCol.querySelector(".js-user-name").textContent = user.username;
-  drawerCol.querySelector(".js-user-bio").textContent = user.bio;
 }
 
-function init() {
-  contacts[0].selected = true;
-  changeUserDetails(contacts[0]);
+function init(i = 0) {
+  contacts.forEach((contact) => (contact.selected = false));
+  contacts[i].selected = true;
+  renderDrawerCol(contacts[i]);
   renderContacts(contacts);
 }
 init();
@@ -97,13 +132,17 @@ chatList.addEventListener("click", function (e) {
         contact.name === selectedContact.querySelector(".chat-name").textContent
     );
     contacts.splice(index, 1);
+    if (selectedContact.classList.contains("selected")) {
+      init(index);
+      return;
+    }
     init();
   } else {
     document
       .querySelectorAll(".chat-list__item")
       .forEach((item) => item.classList.remove("selected"));
     selectedContact.classList.add("selected");
-    changeUserDetails(
+    renderDrawerCol(
       contacts.find(
         (contact) =>
           contact.name ===
@@ -122,4 +161,72 @@ searchInput.addEventListener("input", function () {
       contact.name.toLowerCase().includes(searchValue)
     )
   );
+});
+
+//=================== User profile Update ======================//
+
+const myProfile = document.getElementById("my-profile");
+
+myProfile.addEventListener("click", function () {
+  drawerCol.innerHTML = `
+  <div class="my-profile-details  fx-sb  pd-b-16">
+  <div class="fx-cc  gap-sm">
+      <figure class="avatar  avatar--sm  lh-0">
+          <img class="js-user-img  fill-image" alt="caesar profile photo"  src="https://randomuser.me/api/portraits/women/55.jpg">
+      </figure>
+      <h3 id="my-fullname" class="js-user-fullname  font-lg  fw-sb">Caesar</h3>
+  </div>
+  <button class="close-btn  lh-0">
+      <img src="images/close-menu.png" alt="close menu png">
+  </button>
+</div>
+
+<div class="font-sm  fx-col  gap-md  pd-v-16">
+  <div class="fx-col  gap-sm">
+      <h3 class="font-sm">Username</h3>
+      <input type="text" class="change-name" placeholder="Change name...">
+      <span id="my-username" class="js-user-name">@Caesar</span>
+  </div>
+
+  <div class="fx-col  gap-sm">
+      <h3 class="font-sm">Bio</h3>
+      <textarea rows="1"  class="change-bio" placeholder="Change bio..."></textarea>
+      <p id="my-bio" class="js-user-bio">I like talk shows</p>
+  </div>
+</div>
+<button class="pd-16  change-save-btn"> SAVE </button>`;
+
+  const myFullname = document.getElementById("my-fullname");
+  const myUsername = document.getElementById("my-username");
+  const myBio = document.getElementById("my-bio");
+  const inputName = document.getElementsByClassName("change-name")[0];
+  const inputBio = document.getElementsByClassName("change-bio")[0];
+  const saveBtn = document.getElementsByClassName("change-save-btn")[0];
+
+  let originalName = localStorage.getItem("name") || myFullname.textContent;
+  let originalBio = localStorage.getItem("bio") || myBio.textContent;
+
+  myFullname.textContent = originalName;
+  let changedBio, changedName;
+
+  function changeValues() {
+    myUsername.textContent = `@${
+      changedName?.toLowerCase() || originalName.toLowerCase()
+    }`;
+    myBio.textContent = changedBio || originalBio;
+  }
+  changeValues();
+
+  inputName.addEventListener("input", function () {
+    changedName = inputName.value.trim();
+    localStorage.setItem("name", changedName || originalName);
+    myFullname.textContent = changedName || originalName;
+  });
+
+  inputBio.addEventListener("input", function () {
+    changedBio = inputBio.value;
+    localStorage.setItem("bio", changedBio || originalBio);
+  });
+
+  saveBtn.addEventListener("click", changeValues);
 });

@@ -35,7 +35,7 @@
                 ago
             </div>
             <div class="fx-cc">
-                <div class="toggle  toggle--lg  js-theme-toggle" title="change theme">
+                <div id="js-theme-toggle" class="toggle  toggle--lg" title="change theme">
                     <div class="slider"></div>
                 </div>
 
@@ -61,8 +61,9 @@
                     </svg>
                 </button>
 
-                <figure class="avatar  avatar--md  cur-pointer  lh-0">
-                    <img class="fill-image" src="./assets/images/profile.png" alt="user profile image">
+                <figure id="my-profile" class="avatar  avatar--md  cur-pointer  lh-0">
+                    <img class="fill-image" src="https://randomuser.me/api/portraits/women/55.jpg"
+                        alt="user profile image">
                 </figure>
             </div>
         </div>
@@ -77,7 +78,7 @@
                 </div>
             </div>
 
-            <ul class="chat-list">
+            <ul id="chat-list" class="chat-list">
             </ul>
 
         </aside>
@@ -194,7 +195,7 @@
             </div>
         </section>
 
-        <aside class="drawer-column  pd-hv">
+        <aside id="js-drawer-col" class="drawer-column  pd-hv">
 
             <div class="sender-details  fx-sb  pd-b-16">
                 <div class="fx-cc  gap-sm">
@@ -211,11 +212,13 @@
             <div class="font-sm  fx-col  gap-md  pd-v-16">
                 <div class="fx-col  gap-sm">
                     <h3 class="font-sm">Username</h3>
+                    <input type="text">
                     <span class="js-user-name">@Caesar</span>
                 </div>
 
                 <div class="fx-col  gap-sm">
                     <h3 class="font-sm">Bio</h3>
+                    <textarea rows="2"></textarea>
                     <p class="js-user-bio">I like talk shows</p>
                 </div>
             </div>
