@@ -111,11 +111,13 @@ function renderDrawerCol(user) {
   });
 }
 
-function init(i = 0) {
-  contacts.forEach((contact) => (contact.selected = false));
-  contacts[i].selected = true;
-  renderDrawerCol(contacts[i]);
-  renderContacts(contacts);
+//================= Initialize-rendering ==================//
+
+function init(i = 0, contArr = contacts) {
+  contArr.forEach((contact) => (contact.selected = false));
+  contArr[i].selected = true;
+  renderDrawerCol(contArr[i]);
+  renderContacts(contArr);
 }
 init();
 
@@ -133,8 +135,20 @@ chatList.addEventListener("click", function (e) {
     );
     contacts.splice(index, 1);
     if (selectedContact.classList.contains("selected")) {
-      init(index);
-      return;
+      console.log(contacts);
+      if (contacts.length === 0) {
+        const msg = document.querySelector(".message-view");
+        const chatStatus = document.getElementById("chat-status");
+        chatStatus.innerHTML = "";
+        msg.style.textAlign = "center";
+        drawerCol.innerHTML = "";
+        chatList.innerHTML = "<h3 class='pd-hv'>Welcome to E-message</h3>";
+        msg.innerHTML = "<h1>No messages availabe :( </h1>";
+        return;
+      } else {
+        init(index);
+        return;
+      }
     }
     init();
   } else {
@@ -156,11 +170,14 @@ chatList.addEventListener("click", function (e) {
 
 searchInput.addEventListener("input", function () {
   const searchValue = searchInput.value.toLowerCase().trim();
-  renderContacts(
-    contacts.filter((contact) =>
-      contact.name.toLowerCase().includes(searchValue)
-    )
+  const searchArr = contacts.filter((contact) =>
+    contact.name.toLowerCase().includes(searchValue)
   );
+  if (searchArr.length === 0) {
+    renderContacts(searchArr);
+  } else {
+    init(undefined, searchArr);
+  }
 });
 
 //=================== User profile Update ======================//
@@ -219,8 +236,8 @@ myProfile.addEventListener("click", function () {
 
   inputName.addEventListener("input", function () {
     changedName = inputName.value.trim();
-    localStorage.setItem("name", changedName || originalName);
     myFullname.textContent = changedName || originalName;
+    localStorage.setItem("name", changedName || originalName);
   });
 
   inputBio.addEventListener("input", function () {
@@ -228,5 +245,9 @@ myProfile.addEventListener("click", function () {
     localStorage.setItem("bio", changedBio || originalBio);
   });
 
-  saveBtn.addEventListener("click", changeValues);
+  saveBtn.addEventListener("click", function () {
+    inputBio.value = "";
+    inputName.value = "";
+    changeValues();
+  });
 });
