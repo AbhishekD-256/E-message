@@ -64,7 +64,7 @@ function renderContacts(contacts) {
 
 //================= Change User-details ===================//
 
-function renderDrawerCol(user) {
+function renderProfile(user) {
   drawerCol.innerHTML = `<div class="sender-details  fx-sb  pd-b-16">
   <div class="fx-cc  gap-sm">
       <figure class="avatar  avatar--sm  lh-0">
@@ -116,7 +116,7 @@ function renderDrawerCol(user) {
 function init(i = 0, contArr = contacts) {
   contArr.forEach((contact) => (contact.selected = false));
   contArr[i].selected = true;
-  renderDrawerCol(contArr[i]);
+  renderProfile(contArr[i]);
   renderContacts(contArr);
 }
 init();
@@ -139,8 +139,8 @@ chatList.addEventListener("click", function (e) {
       if (contacts.length === 0) {
         const msg = document.querySelector(".message-view");
         const chatStatus = document.getElementById("chat-status");
-        chatStatus.innerHTML = "";
         msg.style.textAlign = "center";
+        chatStatus.innerHTML = "";
         drawerCol.innerHTML = "";
         chatList.innerHTML = "<h3 class='pd-hv'>Welcome to E-message</h3>";
         msg.innerHTML = "<h1>No messages availabe :( </h1>";
@@ -156,7 +156,7 @@ chatList.addEventListener("click", function (e) {
       .querySelectorAll(".chat-list__item")
       .forEach((item) => item.classList.remove("selected"));
     selectedContact.classList.add("selected");
-    renderDrawerCol(
+    renderProfile(
       contacts.find(
         (contact) =>
           contact.name ===
