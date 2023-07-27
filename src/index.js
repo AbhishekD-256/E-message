@@ -20,9 +20,9 @@ themeToggleBtn.addEventListener("click", function () {
 function renderContacts(contacts) {
   chatList.innerHTML = "";
   if (contacts.length === 0)
-    chatList.innerHTML = '<p class= "pd-hv"> Ayyoo!! no User</p>';
+    chatList.innerHTML = '<p class= "py-md  px-lg "> Ayyoo!! no User</p>';
   contacts.forEach((contact) => {
-    const html = `<li class= "chat-list__item  cur-pointer  fx  gap-sm  pd-hv ${
+    const html = `<li class= "chat-list__item  cur-pointer  fx  gap-sm  py-md  px-lg  ${
       contact.online ? "online" : ""
     } ${contact.muted ? "muted" : ""} ${
       contact.unread_messages > 0 ? "unread" : ""
@@ -65,7 +65,7 @@ function renderContacts(contacts) {
 //================= Change User-details ===================//
 
 function renderProfile(user) {
-  drawerCol.innerHTML = `<div class="sender-details  fx-sb  pd-b-16">
+  drawerCol.innerHTML = `<div class="sender-details  fx-sb  pb-md">
   <div class="fx-cc  gap-sm">
       <figure class="avatar  avatar--sm  lh-0">
           <img class="js-user-img  fill-image" alt="caesar profile photo"  src="${user.image}">
@@ -77,7 +77,7 @@ function renderProfile(user) {
   </button>
 </div>
 
-<div class="font-sm  fx-col  gap-md  pd-v-16">
+<div class="font-sm  fx-col  gap-md  py-md">
   <div class="fx-col  gap-sm">
       <h3 class="font-sm">Username</h3>
       <span class="js-user-name">${user.username}</span>
@@ -89,14 +89,14 @@ function renderProfile(user) {
   </div>
 </div>
 
-<div class="notification-control  fx-sb  pd-v-16">
+<div class="notification-control  fx-sb  py-md">
   <span class="font-sm  fw-sb">Notifications</span>
   <div class="toggle  toggle--sm">
       <div class="slider"></div>
   </div>
 </div>
 
-<div class="pd-t-16  fx-col  gap-md">
+<div class="pt-md  fx-col  gap-md">
   <a class="font-sm  action-link" href="javascript: void(0)">Block user</a>
   <a class="font-sm  action-link" href="javascript: void(0)">Clear history</a>
   <a class="font-sm  action-link" href="javascript: void(0)">Delete conversation</a>
@@ -113,13 +113,13 @@ function renderProfile(user) {
 
 //================= Initialize-rendering ==================//
 
-function init(i = 0, contArr = contacts) {
+function startRender(i = 0, contArr = contacts) {
   contArr.forEach((contact) => (contact.selected = false));
   contArr[i].selected = true;
   renderProfile(contArr[i]);
   renderContacts(contArr);
 }
-init();
+startRender();
 
 //================ Select and Remove contact-list-items ================//
 
@@ -142,15 +142,16 @@ chatList.addEventListener("click", function (e) {
         msg.style.textAlign = "center";
         chatStatus.innerHTML = "";
         drawerCol.innerHTML = "";
-        chatList.innerHTML = "<h3 class='pd-hv'>Welcome to E-message</h3>";
+        chatList.innerHTML =
+          "<h3 class='py-md  px-lg'>Welcome to E-message</h3>";
         msg.innerHTML = "<h1>No messages availabe :( </h1>";
         return;
       } else {
-        init(index);
+        startRender(index);
         return;
       }
     }
-    init();
+    startRender();
   } else {
     document
       .querySelectorAll(".chat-list__item")
@@ -176,7 +177,7 @@ searchInput.addEventListener("input", function () {
   if (searchArr.length === 0) {
     renderContacts(searchArr);
   } else {
-    init(undefined, searchArr);
+    startRender(undefined, searchArr);
   }
 });
 
@@ -186,7 +187,7 @@ const myProfile = document.getElementById("my-profile");
 
 myProfile.addEventListener("click", function () {
   drawerCol.innerHTML = `
-  <div class="my-profile-details  fx-sb  pd-b-16">
+  <div class="my-profile-details  fx-sb  pb-md">
   <div class="fx-cc  gap-sm">
       <figure class="avatar  avatar--sm  lh-0">
           <img class="js-user-img  fill-image" alt="caesar profile photo"  src="https://randomuser.me/api/portraits/women/55.jpg">
@@ -198,7 +199,7 @@ myProfile.addEventListener("click", function () {
   </button>
 </div>
 
-<div class="font-sm  fx-col  gap-md  pd-v-16">
+<div class="font-sm  fx-col  gap-md  py-md">
   <div class="fx-col  gap-sm">
       <h3 class="font-sm">Username</h3>
       <input type="text" class="change-name" placeholder="Change name...">
@@ -211,7 +212,7 @@ myProfile.addEventListener("click", function () {
       <p id="my-bio" class="js-user-bio">I like talk shows</p>
   </div>
 </div>
-<button class="pd-16  change-save-btn"> SAVE </button>`;
+<button class="p-md  change-save-btn"> SAVE </button>`;
 
   const myFullname = document.getElementById("my-fullname");
   const myUsername = document.getElementById("my-username");
